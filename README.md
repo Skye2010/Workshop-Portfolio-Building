@@ -7,7 +7,7 @@ You will get to reinforce all the main components of Web Development and have yo
 # 🛠️ What You'll Build
 - A personal website with main components (HTML/CSS/Javascript)
 - Have a scrollable page including your Projects, Hobbies, Skills, etc.
-- Clickable links 
+- Clickable links
 
 # 🧱 What Can You Change?
 - School information, name, descriptions
@@ -22,7 +22,7 @@ I encourage you to make it your own!
 - Dabble with Javascript! (really important in Web Dev)
 - More Customization through CSS
 - Making your page your own!
-- Importance of having your own portfolio!
+- How to deploy and launch!
 
 ## License
 This project uses MIT license. You are free to copy, modify and use it however you like. 
