@@ -15,17 +15,29 @@
     </head>
     <body>
         <!-- This is a navigation bar where people can click through your webpage, You can add additional sections like your resume or a blog! You just need to add <a></a> underneath -->
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand" href="#">Valentina Fox 🦊</a>
-                <div class="navbar-nav">
-                    <a class="nav-link" href="#home">Home</a>
-                    <a class="nav-link" href="#about">About</a>
-                    <a class="nav-link" href="#projects">Projects</a>
-                    <a class="nav-link" href="#contact">Contact</a>
-                </div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Valentina Fox 🦊</a>
+
+            <!-- This is the burger button, shows on small screens -->
+            <button class="navbar-toggler" type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Wrap your links in this collapse div just add <a></a> to the bottom! -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="#home">Home</a>
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#projects">Projects</a>
+                <a class="nav-link" href="#contact">Contact</a>
             </div>
-        </nav>
+        </div>
+
+  </div>
+</nav>
         
         <div class="home_page" id="home">
             <div class="home_section">
@@ -36,7 +48,7 @@
                 <p>9th Grade ~ Little Leaf Highschool ~ <strong><i>GPA:</i> 4.4</strong></p>
                 <p><strong>Academic Year [2018 - 2022]</strong></p>
                 <!-- Just a fun divider I added, if you search up cute text emojis, you can replace it with something else and it'll show up! You can edit the color via css -->
-                <p id="divider">°❀⋆.ೃ࿔*:･</p>
+                <p id="divider">˚˖𓍢ִ໋🌷͙֒✧˚.🎀༘⋆</p>
                 <!-- Try to find a quote you really like and you can put it on your profile -->
                 <p><i>"A bonfire is a big fire, right? So is an ocean just a bonlake?"</i></p>
             </div>
@@ -44,7 +56,7 @@
         
         <div class="about_page" id="about">
             <div class="about_section">
-                <h1 id="cute_title">About Me</h1>
+                <h1 class="cute_title">About Me</h1>
                 <!-- Add a statement of what you like to do, what skills you have, your passions, etc. -->
                 <p> Hi! I'm Valentina, a passionate student who loves bringing creativity into everything I do. Whether it's working on a new project, spending time outdoors, exploring new hobbies, I always keep implementing! I love working with new technology and finding ways to gain new knowledge on other softwares!  🌸⭐</p>
             </div>
@@ -52,7 +64,7 @@
             <div class="container">
                 <div class="row" style="margin-bottom: 20px;">
                     <div class="col-4">
-                        <h2 id="about-title">Academic Strengths</h2>
+                        <h2 id="about_title">Academic Strengths</h2>
                     </div>
                     <div class="col-8">
                         <div class="tags-container">
@@ -66,21 +78,21 @@
                 </div>
                 <div class="row">
                     <div class="col-4" style="margin-bottom: 20px;">
-                        <h2 id="about-title">Extracurriculars</h2>
+                        <h2 id="about_title">Extracurriculars</h2>
                     </div>
                     <div class="col-8">
                         <div class="tags-container">
                             <!-- Change this to any extracurriculars you take (including clubs)! -->
-                            <span class="tag">Volunteering</span>
+                            <span class="tag">UCSD EDGE Program</span>
                             <span class="tag">Violin</span>
                             <span class="tag">Art</span>
-                            <span class="tag">...</span>
+                            <span class="tag">Volunteering</span>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-4">
-                        <h2 id="about-title">Awards & Achievements</h2>
+                        <h2 id="about_title">Awards & Achievements</h2>
                     </div>
                     <div class="col-8">
                         <div class="tags-container">
@@ -95,36 +107,49 @@
         </div>
 
        <div class="projects_page" id="projects">
-            <h1 id="cute_title">Projects</h1>
+            <h1 class="cute_title">Projects</h1>
             <div class="projects_grid">
+                <!-- Project #1 -->
                 <div class="project_card">
                     <!-- You can already add one project you completed! You can change the name to the story you made -->
-                    <h2>"Choose Your Own Adventure": The Case of the Stolen Backpack</h2>
-                    <p>I made a "Choose Your Own Adventure" style HTML/CSS project about a stolen backpack where users can click to choose different situations.</p>
-                    <a href="https://github.com/danieella/Workshop-Web-Application" target="_blank" class="github">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="50">
+                    <div class="project_desc">
+                        <h2>"Choose Your Own Adventure": The Case of the Stolen Backpack</h2>
+                        <p>I made a "Choose Your Own Adventure" style HTML/CSS project about a stolen backpack where users can click to choose different situations.</p>
+                    </div>
+                    <div class="project_footer">
+                        <!-- Link to your own repo here! -->
+                        <a href="https://github.com/danieella/Workshop-Web-Application" target="_blank" class="github">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="50">
+                    </div>
                     </a>
                 </div>
+                <!-- Project #2 -->
                 <div class="project_card">
                     <!-- You can change this project to something else you're proud of -->
                     <h2>EDGE MP3 Player Project</h2>
                     <p>This project is when I built an embedded arduino/circuit system that plays music and has controls!</p>
                     <!-- You can add a link to a google doc or to a picture using <a href="..."> -->
-                     <p>📄</p>
+                    <div class="project_footer">
+                        <p>📄</p>
+                    </div>
                 </div>
+                <!-- Project #3 -->
                 <div class="project_card">
                     <!-- You can change this project to something else you're proud of -->
                     <h2>School Robotics Competition 2024 -- 2nd Place</h2>
-                    <p>I built a fully functional robotic arm using Arduino. Competed against 15 teams.</p>
-                    <p>🔬</p>
+                    <p>I built a fully functional robotic arm using Arduino and competed against 15 teams.</p>
+                    <div class="project_footer">
+                        <p>🔬</p>
+                    </div>
                 </div>
+                <!-- You can add a 4th project here! -->
             </div>
         </div>
 
         <div class="contact_page" id="contact">
             <div class="contact_container">
                 <div class="contact_desc">
-                    <h1 id="cute_title">Contact</h1>
+                    <h1 class="cute_title">Contact</h1>
                     <p>Feel free to reach out!</p>
                 </div>
                 <div class="contact_card">
@@ -133,6 +158,7 @@
             </div>
         </div>
         <!-- Make sure instead of script being at the top with the css file, it's at the bottom so it can read all of the inputs -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="script.js"></script>
     </body>
 </html>

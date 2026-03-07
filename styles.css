@@ -1,5 +1,5 @@
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* This makes the page scroll smoothly when clicking the nav link instead of jumping */
 }
 
 body {
@@ -17,27 +17,27 @@ body {
   position: fixed !important;
   top: 0 !important;
   width: 100%; /* You can play around with the width if you'd like maybe if you just want it smaller! */
-  background-color: white; /* You can change the color of the whole bar! */
+  background-color: white !important; /* You can change the color of the whole bar! */
   z-index: 100;
 }
 
-.navbar .nav-link {
-  color: black; /* You can change the color of the link to the other sections! */
+.navbar, .nav-link {
+  color: black !important; /* You can change the color of the link to the other sections! */
 }
 
 .navbar-brand {
-  color: black; /* You can change the color of both your name title! */
+  color: black!important; /* You can change the color of both your name title! */
 }
 
-.navbar .nav-link:hover {
-    color: rgb(218, 95, 115); /* This makes it so if you hover over the sections then it's a different color */
+.navbar, .nav-link:hover {
+    color: rgb(218, 95, 115)!important; /* This makes it so if you hover over the sections then it's a different color */
 }
 
 .navbar-brand:hover {
-  color: rgb(218, 95, 115);
+  color: rgb(218, 95, 115)!important;
 }
 
-/* Home Page */
+/* ==== Home Page ==== */
 .home_page {
   display: flex;
   flex-direction: column;
@@ -70,9 +70,9 @@ body {
   50% { border-color: transparent; }
 }
 
-/* About Page */
+/* ==== About Page ==== */
 .about_page {
-    padding: 100px;
+    padding: 100px 40px;
 }
 
 .about_section {
@@ -81,9 +81,14 @@ body {
   align-items: center;
   text-align: left;
   padding-bottom: 20px;
+  padding: 20px;
 }
 
-#cute_title {
+#about_title {
+  padding-right: 50px;
+}
+
+.cute_title {
   font-family: "Bitcount Prop Double Ink", system-ui; /* You can change the font here it changes everything with the cute_title id */
 }
 
@@ -102,6 +107,7 @@ body {
   flex-wrap: wrap;
   gap: 8px;
   transition: transform 0.3s ease; /* This makes it so the tags stick out of the webpage! */
+  padding-left: 20px;
 }
 
 .tag:hover {
@@ -110,7 +116,7 @@ body {
   cursor: default;
 }
 
-/* Project Page */
+/* ==== Project Page ==== */
 .projects_page {
   padding: 60px;
   text-align: center;
@@ -130,13 +136,20 @@ body {
     padding: 20px;
     width: 400px;
     text-align: left;
+    display: flex;
+    flex-direction: column;
 }
 
 .project_card h2 {
   font-size: 20px;
 }
 
-/* Contact Page */
+.project_footer {
+  margin-top: auto;
+  color: blue;
+}
+
+/* ==== Contact Page ==== */
 .contact_container {
   display: flex;
   align-items: center;
@@ -164,7 +177,7 @@ body {
 }
 
 .contact_card a:hover {
-  color: rgb(201, 72, 93) !important; /* You can change the hover of your email */
+  color: rgb(0, 157, 209) !important; /* You can change the hover of your email */
 }
 
 .contact_card a {
@@ -174,4 +187,48 @@ body {
   
 #divider {
     color: rgb(218, 95, 115); /* This is the divider at the home page between the academic year and the quote */
+}
+
+/* ==== MEDIA ==== */
+/* this is extremely important to ensure that it's accessible outside of desktop interface! */
+@media (max-width: 768px) {
+
+  .about_page {
+    padding: 40px 20px; /* less padding on small screens */
+  }
+
+  /* stack the Bootstrap columns vertically on mobile */
+  .row > .col-4, 
+  .row > .col-8 {
+    width: 100%;        /* overrides Bootstrap's side-by-side columns */
+    margin-bottom: 8px;
+  }
+
+  #about_title {
+    margin-bottom: 8px;
+  }
+
+  .projects_grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project_card {
+    width: 100%;        /* cards stretch full width on mobile */
+    max-width: 360px;
+  }
+
+  .home_section {
+    padding: 40px 20px; 
+  }
+
+  .contact_container {
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .navbar .navbar-nav {
+    gap: 4px;           /* tightens nav links on small screens */
+  }
 }
